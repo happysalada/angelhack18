@@ -35,7 +35,7 @@ const initClient = clientToInit => new Promise((resolve, reject) => clientToInit
 const joinChannel =
   (clientToJoinChannel, joinChannelKey, joinChannelValue) => new Promise((resolve, reject) => clientToJoinChannel.join(joinChannelKey, joinChannelValue, null, uid => resolve(uid)));
 
-const join = async () => {
+export const join = async () => {
   client = AgoraRTC.createClient({mode: 'interop'});
   await initClient(client);
   const uid = await joinChannel(client, channelKey, channelValue);
@@ -124,9 +124,6 @@ const join = async () => {
     }
   });
 };
-
-const joinButton = document.getElementById('join');
-joinButton.onclick = join;
 
 /**
  * Initializes all the analytics setup. Creates trackers and sets initial
