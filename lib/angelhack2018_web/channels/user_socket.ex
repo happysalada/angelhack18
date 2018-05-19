@@ -1,6 +1,9 @@
 defmodule Angelhack2018Web.UserSocket do
   use Phoenix.Socket
 
+  ## Transports
+  transport(:websocket, Phoenix.Transports.WebSocket, timeout: 45_000)
+
   ## Channels
   # channel "room:*", Angelhack2018Web.RoomChannel
 
