@@ -11,6 +11,7 @@ import css from '../css/app.css';
 //
 import 'phoenix_html';
 import startAgora from './agora';
+import {join} from './agora';
 // Import local files
 //
 // Local files can be imported directly using relative
@@ -18,8 +19,14 @@ import startAgora from './agora';
 
 // import socket from "./socket"
 
+export default () => {
+  join();
+  document.getElementById('map').style = 'display: none';
+};
+
 const initialize = () => {
   if (document.getElementById('video')) startAgora();
+  console.log(window.app);
 };
 
 document.addEventListener('DOMContentLoaded', initialize, false);
