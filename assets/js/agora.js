@@ -1,7 +1,7 @@
 /* global AgoraRTC */
 
-const audioSelect = document.querySelector('select#audioSource');
-const videoSelect = document.querySelector('select#videoSource');
+const audioSelect = document.getElementById('audioSource');
+const videoSelect = document.getElementById('videoSource');
 /**
  * Get the list of devices
  */
@@ -125,7 +125,7 @@ const join = async () => {
   });
 };
 
-const joinButton = document.querySelector('#join');
+const joinButton = document.getElementById('join');
 joinButton.onclick = join;
 
 /**

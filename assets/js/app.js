@@ -19,7 +19,7 @@ import startAgora from './agora';
 // import socket from "./socket"
 
 const initialize = () => {
-  startAgora();
+  if (document.getElementById('video')) startAgora();
 };
 
 document.addEventListener('DOMContentLoaded', initialize, false);
