@@ -5,100 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no"/>
     <title>Angelhack2018 · Phoenix Framework</title>
-    <link rel="stylesheet" href="../css/choose_language.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.9/angular-material.css'>
-    <link rel='stylesheet prefetch' href='https://material.angularjs.org/1.1.9/docs.css'>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    <link rel = "stylesheet"
+       href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel = "stylesheet"
+       href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type = "text/javascript"
+       src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
+
+    <script>
+       $(document).ready(function() {
+          $('select').material_select();
+       });
+    </script>
   </head>
-  <body>
-    <header>
-      <section class="container">
-        <nav style="width:100%">
-          <div class="nav-wrapper">
-            <a href="#" class="brand-logo">My drug store </a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="sass.html">Link1</a></li>
-              <li><a href="badges.html">Link1</a></li>
-              <li><a href="collapsible.html">Login</a></li>
-            </ul>
-          </div>
-        </nav>
-        <a href="http://phoenixframework.org/" class="phx-logo">
-        </a>
-      </section>
-    </header>
+  <body class = "container">
 
-    <main role="main" class="container">
-      <div ng-controller="SelectOptGroupController" class="md-padding selectdemoOptionGroups" ng-cloak="" ng-app="MyApp">
-        <div>
+     <div class = "row">
+        <form class = "col s12">
+           <div class = "row">
 
-          <div layout="row" layout-align="center">
-            <md-input-container style="margin-right: 10px;">
-              <label>Pick up your language</label>
-              <md-select ng-model="language">
-                <md-option ng-repeat="language in languages" value="{{language}}">{{language}}</md-option>
-              </md-select>
-            </md-input-container>
-          </div>
-          <div ng-if="language">
-              <md-content class = "md-padding autocomplete" layout = "column">
-
-              <md-list class = "fixedRows">
-                 <md-subheader class = "md-no-sticky">List of english speaking pharmacys</md-subheader>
-                 <md-list-item class = "md-2-line contact-item">
-                    <img ng-src = "{{contact.image}}" class = "md-avatar"
-                       alt = "{{contact.name}}" />
-                    <div class = "md-list-item-text compact">
-                       <h3>National Azabu Supermarket Pharmacy</h3>
-                       <p>The National Azabu Supermarket, the well-known supermarket frequented by foreigners and expats in Minami Azabu has a pharmacy. It's convenient if you need to do some grocery shopping in addition to getting your prescription filled in English.</p>
-                    </div>
-                 </md-list-item>
-                 <br>
-                 <md-list-item class = "md-2-line contact-item">
-
-                    <img ng-src = "{{contact.image}}" class = "md-avatar"
-                       alt = "{{contact.name}}" />
-                    <div class = "md-list-item-text compact">
-                       <h3>National Azabu Supermarket Pharmacy</h3>
-                       <p>The National Azabu Supermarket, the well-known supermarket frequented by foreigners and expats in Minami Azabu has a pharmacy. It's convenient if you need to do some grocery shopping in addition to getting your prescription filled in English.</p>
-                    </div>
-                 </md-list-item>
-                 <br>
-                 <md-list-item class = "md-2-line contact-item">
-                    <img ng-src = "{{contact.image}}" class = "md-avatar"
-                       alt = "{{contact.name}}" />
-                    <div class = "md-list-item-text compact">
-                       <h3>National Azabu Supermarket Pharmacy</h3>
-                       <p>The National Azabu Supermarket, the well-known supermarket frequented by foreigners and expats in Minami Azabu has a pharmacy. It's convenient if you need to do some grocery shopping in addition to getting your prescription filled in English.</p>
-                    </div>
-                 </md-list-item>
+              <select>
+                 <option value = "" disabled selected>Select your language</option>
+                 <option value = "1">English</option>
+                 <option value = "2">Afrikaans</option>
+                 <option value = "3">Albanian</option>
+                 <option value = "1">Amharic</option>
+                 <option value = "2">Arabic</option>
+                 <option value = "3">Armenian</option>
+                 <option value = "1">Basque</option>
+                 <option value = "2">Bengali</option>
+                 <option value = "3">Byelorussian</option>
+                 <option value = "2">Bulgarian</option>
+                 <option value = "3">Catalan</option>
+                 <option value = "1">Czech</option>
+                 <option value = "2">Chinese</option>
+                 <option value = "1">Croatian</option>
+                 <option value = "2"> Danish</option>
+                 <option value = "3">Dutch</option>
+              </select>
+           </div>
 
 
-              </md-list>
-           </md-content>
-
-
-          </divs>
-
-        </div>
-      </div>
-    </main>
-
-    <!--
-    Copyright 2016 Google Inc. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that can be foundin the LICENSE file at http://material.angularjs.org/HEAD/license.
-    -->
-    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js'></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.min.js'></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.min.js'></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-aria.min.js'></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-messages.min.js'></script>
-    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
-    <script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.9/angular-material.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    <script src="../js/choose_language.js"></script>
-
+        </form>
+     </div>
   </body>
 </html>
