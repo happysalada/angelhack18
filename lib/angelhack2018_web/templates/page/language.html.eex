@@ -10,7 +10,6 @@
   }
 </style>
 <a class='dropdown-trigger btn' href='#' data-target='dropdown1' style="text-align: center;">Choose your language</a>
-
   <!-- Dropdown Structure -->
   <ul id='dropdown1' class='dropdown-content'>
     <li><a href="/english">English</a></li>
@@ -30,7 +29,6 @@
     <li><a href="#!">Armenian</a></li>
     <li><a href="#!">Danish</a></li>
     <li><a href="#!">German</a></li>
-
   </ul>
 
 <script>
@@ -48,6 +46,9 @@
 </div>
 <div id="video" style="margin:0 auto;">
   <div id="agora_local" style="float:right;width:210px;height:147px;display:inline-block;"></div>
+</div>
+<div id="doctor" style="margin:0 auto;">
+  <div id="agora_remote" style="float:right;width:210px;height:147px;display:inline-block;"></div>
 </div>
 <div id="map"></div>
 <script>

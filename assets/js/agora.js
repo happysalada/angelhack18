@@ -36,6 +36,7 @@ const joinChannel =
   (clientToJoinChannel, joinChannelKey, joinChannelValue) => new Promise((resolve, reject) => clientToJoinChannel.join(joinChannelKey, joinChannelValue, null, uid => resolve(uid)));
 
 export const join = async () => {
+  document.getElementById('hangup').style.display = 'block';
   client = AgoraRTC.createClient({mode: 'interop'});
   await initClient(client);
   const uid = await joinChannel(client, channelKey, channelValue);

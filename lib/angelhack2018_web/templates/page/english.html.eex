@@ -9,9 +9,9 @@
     padding: 0;
   }
 </style>
-<a class='dropdown-trigger btn' href='#' data-target='dropdown1' style="align:center">Choose your language</a>
-
-  <!-- Dropdown Structure -->
+<div style="display: flex; justify-content: space-between;">
+  <a class='dropdown-trigger btn' href='#' data-target='dropdown1' style="align:center">Choose your language</a>
+    <!-- Dropdown Structure -->
   <ul id='dropdown1' class='dropdown-content'>
     <li><a href="#!">English</a></li>
     <li><a href="#!">Afrikaans</a></li>
@@ -30,15 +30,15 @@
     <li><a href="#!">Armenian</a></li>
     <li><a href="#!">Danish</a></li>
     <li><a href="#!">German</a></li>
-
   </ul>
-
-<script>
-  $('.dropdown-trigger').dropdown();
-</script>
-<div>
-  <h4 class="teal-text">English pharmacies in your area</h4>
+  <script>
+    $('.dropdown-trigger').dropdown();
+  </script>
+  <a href="/order" id="hangup" class="waves-effect waves-light btn-large" style="display: none">Hang up</a>
 </div>
+  <div>
+    <h4 class="teal-text">English pharmacies in your area</h4>
+  </div>
 <div id="div_device" class="panel panel-default">
   <div class="select">
     <select id="audioSource"></select>
