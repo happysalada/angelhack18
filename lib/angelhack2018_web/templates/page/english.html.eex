@@ -57,7 +57,7 @@
     var pharmacies = [
       {name: 'QOL Marunouchi', address: '東京都千代田区 大手町2-2-1　新大手町ビル122区', position: {lat: 35.685291, lng: 139.767059}},
       {name: 'Nihon Chozai Yomiuri Shinbunsha', address: '東京都千代田区 大手町1-7-1　読売新聞ビル3階', position: {lat: 35.687216, lng: 139.764471}},
-      {name: 'QOL Kanda Kjibashi', address: '東京都千代田区 鍛冶町2-3-2　神田センタービル1階', position: {lat: 35.691327, lng: 139.772112}}
+      {name: 'QOL Kanda Kajibashi', address: '東京都千代田区 鍛冶町2-3-2　神田センタービル1階', position: {lat: 35.691327, lng: 139.772112}}
     ]
     map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 35.687765, lng: 139.775901},
