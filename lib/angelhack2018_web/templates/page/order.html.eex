@@ -11,7 +11,7 @@
 </style>
 
 <div>
-  <h3>Your order</h3>
+  <h3 class="teal-text">Your order</h3>
   <p>Medication name: medication 1</p>
   <p>Medication name: medication 2</p>
 

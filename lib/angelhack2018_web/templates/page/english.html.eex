@@ -37,7 +37,7 @@
   $('.dropdown-trigger').dropdown();
 </script>
 <div>
-  <h4>English pharmacies in your area</h4>
+  <h4 class="teal-text">English pharmacies in your area</h4>
 </div>
 <div id="div_device" class="panel panel-default">
   <div class="select">
