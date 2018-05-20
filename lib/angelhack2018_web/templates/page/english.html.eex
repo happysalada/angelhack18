@@ -9,93 +9,95 @@
     padding: 0;
   }
 </style>
-<div style="display: flex; justify-content: space-between;">
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1' style="align:center">Choose your language</a>
-    <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">English</a></li>
-    <li><a href="#!">Afrikaans</a></li>
-    <li><a href="#!">Albanian</a></li>
-    <li><a href="#!">Amharic</a></li>
-    <li><a href="#!">Arabic</a></li>
-    <li><a href="#!">Armenian</a></li>
-    <li><a href="#!">Basque</a></li>
-    <li><a href="#!">Bengali</a></li>
-    <li><a href="#!">Bulgarian</a></li>
-    <li><a href="#!">Byelorussian</a></li>
-    <li><a href="#!">Bulgarian</a></li>
-    <li><a href="#!">Chinese</a></li>
-    <li><a href="#!">Croatian</a></li>
-    <li><a href="#!">Arabic</a></li>
-    <li><a href="#!">Armenian</a></li>
-    <li><a href="#!">Danish</a></li>
-    <li><a href="#!">German</a></li>
-  </ul>
+<main id="main" class="container">
+  <div style="display: flex; justify-content: space-between;">
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown1' style="align:center">Choose your language</a>
+      <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="#!">English</a></li>
+      <li><a href="#!">Afrikaans</a></li>
+      <li><a href="#!">Albanian</a></li>
+      <li><a href="#!">Amharic</a></li>
+      <li><a href="#!">Arabic</a></li>
+      <li><a href="#!">Armenian</a></li>
+      <li><a href="#!">Basque</a></li>
+      <li><a href="#!">Bengali</a></li>
+      <li><a href="#!">Bulgarian</a></li>
+      <li><a href="#!">Byelorussian</a></li>
+      <li><a href="#!">Bulgarian</a></li>
+      <li><a href="#!">Chinese</a></li>
+      <li><a href="#!">Croatian</a></li>
+      <li><a href="#!">Arabic</a></li>
+      <li><a href="#!">Armenian</a></li>
+      <li><a href="#!">Danish</a></li>
+      <li><a href="#!">German</a></li>
+    </ul>
+    <script>
+      $('.dropdown-trigger').dropdown();
+    </script>
+    <a href="/order" id="hangup" class="waves-effect waves-light btn-large" style="display: none">Hang up</a>
+  </div>
+    <div>
+      <h4 class="teal-text">English pharmacies in your area</h4>
+    </div>
+  <div id="div_device" class="panel panel-default">
+    <div class="select">
+      <select id="audioSource"></select>
+    </div>
+    <div class="select">
+      <select id="videoSource"></select>
+    </div>
+  </div>
+  <div id="video" style="margin:0 auto;">
+    <div id="agora_local" style="float:right;width:210px;height:147px;display:inline-block;"></div>
+  </div>
+  <div id="map"></div>
   <script>
-    $('.dropdown-trigger').dropdown();
-  </script>
-  <a href="/order" id="hangup" class="waves-effect waves-light btn-large" style="display: none">Hang up</a>
-</div>
-  <div>
-    <h4 class="teal-text">English pharmacies in your area</h4>
-  </div>
-<div id="div_device" class="panel panel-default">
-  <div class="select">
-    <select id="audioSource"></select>
-  </div>
-  <div class="select">
-    <select id="videoSource"></select>
-  </div>
-</div>
-<div id="video" style="margin:0 auto;">
-  <div id="agora_local" style="float:right;width:210px;height:147px;display:inline-block;"></div>
-</div>
-<div id="map"></div>
-<script>
-  var map;
-  function initMap() {
-    var pharmacies = [
-      {name: 'QOL Marunouchi', address: '東京都千代田区 大手町2-2-1　新大手町ビル122区', position: {lat: 35.685291, lng: 139.767059}},
-      {name: 'Nihon Chozai Yomiuri Shinbunsha', address: '東京都千代田区 大手町1-7-1　読売新聞ビル3階', position: {lat: 35.687216, lng: 139.764471}},
-      {name: 'QOL Kanda Kajibashi', address: '東京都千代田区 鍛冶町2-3-2　神田センタービル1階', position: {lat: 35.691327, lng: 139.772112}}
-    ]
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 35.687765, lng: 139.775901},
-      zoom: 13
-    });
-    var markers = pharmacies.map(function(pharmacy) {
-      return new google.maps.Marker({
-        position: pharmacy.position,
-        map: map
+    var map;
+    function initMap() {
+      var pharmacies = [
+        {name: 'QOL Marunouchi', address: '東京都千代田区 大手町2-2-1　新大手町ビル122区', position: {lat: 35.685291, lng: 139.767059}},
+        {name: 'Nihon Chozai Yomiuri Shinbunsha', address: '東京都千代田区 大手町1-7-1　読売新聞ビル3階', position: {lat: 35.687216, lng: 139.764471}},
+        {name: 'QOL Kanda Kajibashi', address: '東京都千代田区 鍛冶町2-3-2　神田センタービル1階', position: {lat: 35.691327, lng: 139.772112}}
+      ]
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 35.687765, lng: 139.775901},
+        zoom: 13
       });
-    });
-    var infoWindows = pharmacies.map(function(pharmacy, index, allWindows) {
-      var contentString =
-        '<div class="card blue-grey darken-1" style="margin: 0px;">'+
-        '<div class="card-content white-text">'+
-        '<span class="card-title">'+ pharmacy.name +'</span>'+
-        '<p>'+ pharmacy.address +'</p>'+
-        '</div>'+
-        '<div class="card-action">'+
-        '<a id="join" onclick="window.app.default()" style="display: flex;align-items: center;"><i class="material-icons">call</i><span style="margin-left: 10px;">Call</span></a>'+
-        '</div>'+
-        '</div>';
-      var infoWindow = new google.maps.InfoWindow({
-        content: contentString
+      var markers = pharmacies.map(function(pharmacy) {
+        return new google.maps.Marker({
+          position: pharmacy.position,
+          map: map
+        });
       });
-      var marker = markers[index]
-      marker.addListener('click', function() {
-        closeAllWindows();
-        infoWindow.open(map, marker);
-      });
-      return infoWindow;
-    })
-    function closeAllWindows() {
-      infoWindows.forEach(function(singleWindow) {
-        if (singleWindow.map) singleWindow.close();
+      var infoWindows = pharmacies.map(function(pharmacy, index, allWindows) {
+        var contentString =
+          '<div class="card blue-grey darken-1" style="margin: 0px;">'+
+          '<div class="card-content white-text">'+
+          '<span class="card-title">'+ pharmacy.name +'</span>'+
+          '<p>'+ pharmacy.address +'</p>'+
+          '</div>'+
+          '<div class="card-action">'+
+          '<a id="join" onclick="window.app.default()" style="display: flex;align-items: center;"><i class="material-icons">call</i><span style="margin-left: 10px;">Call</span></a>'+
+          '</div>'+
+          '</div>';
+        var infoWindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        var marker = markers[index]
+        marker.addListener('click', function() {
+          closeAllWindows();
+          infoWindow.open(map, marker);
+        });
+        return infoWindow;
       })
+      function closeAllWindows() {
+        infoWindows.forEach(function(singleWindow) {
+          if (singleWindow.map) singleWindow.close();
+        })
+      }
     }
-  }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSK3Rm1nizTKldV12goJcM85b2VN4Z3u8&callback=initMap"
-    async defer></script>
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSK3Rm1nizTKldV12goJcM85b2VN4Z3u8&callback=initMap"
+      async defer></script>
+</main>

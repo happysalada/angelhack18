@@ -9,6 +9,7 @@
     padding: 0;
   }
 </style>
+<main id="main" class="container">
 <a class='dropdown-trigger btn' href='#' data-target='dropdown1' style="text-align: center;">Choose your language</a>
   <!-- Dropdown Structure -->
   <ul id='dropdown1' class='dropdown-content'>
@@ -107,3 +108,4 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSK3Rm1nizTKldV12goJcM85b2VN4Z3u8&callback=initMap"
     async defer></script>
+</main>
