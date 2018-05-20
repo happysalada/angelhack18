@@ -47,9 +47,6 @@
 </div>
 <div id="map"></div>
 <script>
-  $(document).ready(function() {
-    $('select').material_select();
-  });
   var map;
   function initMap() {
     var pharmacies = [
