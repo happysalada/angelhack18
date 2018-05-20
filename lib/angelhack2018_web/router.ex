@@ -19,6 +19,8 @@ defmodule Angelhack2018Web.Router do
 
     get("/", PageController, :index)
     get("/language", PageController, :language)
+    get("/english", PageController, :english)
+    get("/order", PageController, :order)
   end
 
   # Other scopes may use custom stacks.
