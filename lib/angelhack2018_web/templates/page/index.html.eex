@@ -9,7 +9,7 @@
         </div>
         <br><br>
         <div class="row center">
-          <a href="#" id="get-started-button" class="btn-large waves-effect waves-light pink lighten-1">Get Started</a>
+          <a href="/language" id="get-started-button" class="btn-large waves-effect waves-light pink lighten-1">Get Started</a>
         </div>
         <br><br>
       </div>
