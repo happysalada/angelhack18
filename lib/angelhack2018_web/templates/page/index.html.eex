@@ -112,4 +112,6 @@
       Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
       </div>
     </div>
+    <script src="../js/materialize.js"></script>
+    <script src="../js/init.js"></script>
   </footer>

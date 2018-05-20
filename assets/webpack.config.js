@@ -12,7 +12,9 @@ module.exports = (env, options) => ({
     ]
   },
   entry: {
-    app: './js/app.js'
+    app: './js/app.js',
+    init: './js/init.js',
+    materialize: './js/materialize.js'
   },
   output: {
     filename: '[name].js',
