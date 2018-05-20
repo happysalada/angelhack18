@@ -9,11 +9,11 @@
     padding: 0;
   }
 </style>
-<a class='dropdown-trigger btn' href='#' data-target='dropdown1' style="text-align: center;">Choose your language</a>
+<a class='dropdown-trigger btn' href='#' data-target='dropdown1' style="align:center">Choose your language</a>
 
   <!-- Dropdown Structure -->
   <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="/language_english.html.eex">English</a></li>
+    <li><a href="#!">English</a></li>
     <li><a href="#!">Afrikaans</a></li>
     <li><a href="#!">Albanian</a></li>
     <li><a href="#!">Amharic</a></li>
@@ -37,6 +37,7 @@
   $('.dropdown-trigger').dropdown();
 </script>
 <div>
+  <h4>English pharmacies in your area</h4>
 </div>
 <div id="div_device" class="panel panel-default">
   <div class="select">

@@ -9,34 +9,23 @@
     padding: 0;
   }
 </style>
-<a class='dropdown-trigger btn' href='#' data-target='dropdown1' style="text-align: center;">Choose your language</a>
 
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="/language_english.html.eex">English</a></li>
-    <li><a href="#!">Afrikaans</a></li>
-    <li><a href="#!">Albanian</a></li>
-    <li><a href="#!">Amharic</a></li>
-    <li><a href="#!">Arabic</a></li>
-    <li><a href="#!">Armenian</a></li>
-    <li><a href="#!">Basque</a></li>
-    <li><a href="#!">Bengali</a></li>
-    <li><a href="#!">Bulgarian</a></li>
-    <li><a href="#!">Byelorussian</a></li>
-    <li><a href="#!">Bulgarian</a></li>
-    <li><a href="#!">Chinese</a></li>
-    <li><a href="#!">Croatian</a></li>
-    <li><a href="#!">Arabic</a></li>
-    <li><a href="#!">Armenian</a></li>
-    <li><a href="#!">Danish</a></li>
-    <li><a href="#!">German</a></li>
-
-  </ul>
-
-<script>
-  $('.dropdown-trigger').dropdown();
-</script>
 <div>
+  <h3>Your order</h3>
+  <p>Medication name: medication 1</p>
+  <p>Medication name: medication 2</p>
+
+  <h3>Choose pick-up location:</h3>
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="first_name" type="text" class="validate">
+        <label for="first_name">Email</label>
+      </div>
+    </div>
+  </form>
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Confirm</a>
+
 </div>
 <div id="div_device" class="panel panel-default">
   <div class="select">
