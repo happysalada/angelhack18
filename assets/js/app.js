@@ -26,7 +26,6 @@ export default () => {
 
 const initialize = () => {
   if (document.getElementById('video')) startAgora();
-  console.log(window.app);
 };
 
 document.addEventListener('DOMContentLoaded', initialize, false);

@@ -1,80 +1,115 @@
-<style>
-  #map {
-    height: 500px;
-    width: 800px;
-  }
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-</style>
+<div id="index-banner" class="parallax-container">
+    <div class="parallax"><img src="./images/background1_1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center pink-text teal-text ">My Drugstore</h1>
+        <div class="row center">
+          <h5 class="header col s12 light pink-text">Medical support for foreigners</h5>
+        </div>
+        <br><br>
+        <div class="row center">
+          <a href="#" id="get-started-button" class="btn-large waves-effect waves-light pink lighten-1">Get Started</a>
+        </div>
+        <br><br>
+      </div>
+    </div>
+  </div>
 
-<div id="div_device" class="panel panel-default">
-  <div class="select">
-    <select id="audioSource"></select>
+
+  <div class="container">
+    <div class="section">
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center pink-text"><i class="material-icons">call</i></h2>
+            <h5 class="center">Quick connection to international pharmacies</h5>
+            <p class="light">Our application will connect you to the pharmacy which speaks your language</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center pink-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Professional consultation</h5>
+
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center pink-text"><i class="material-icons">directions_car</i></h2>
+            <h5 class="center">Delivery</h5>
+
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-  <div class="select">
-    <select id="videoSource"></select>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light pink-text">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="/images/background3.jpg" alt="Unsplashed background img 2"></div>
   </div>
-</div>
-<div id="video" style="margin:0 auto;">
-  <div id="agora_local" style="float:right;width:210px;height:147px;display:inline-block;"></div>
-</div>
-<div id="map"></div>
-<script>
-  var map;
-  function initMap() {
-    var pharmacies = [
-      {name: 'QOL Marunouchi', address: '東京都千代田区 大手町2-2-1　新大手町ビル122区', position: {lat: 35.685291, lng: 139.767059}},
-      {name: 'Nihon Chozai Yomiuri Shinbunsha', address: '東京都千代田区 大手町1-7-1　読売新聞ビル3階', position: {lat: 35.687216, lng: 139.764471}},
-      {name: 'QOL Kanda Kjibashi', address: '東京都千代田区 鍛冶町2-3-2　神田センタービル1階', position: {lat: 35.691327, lng: 139.772112}},
-      {name: 'Sugi Otyanomizu', address: '東京都千代田区 神田駿河台2-2-5', position: {lat: 35.69894, lng: 139.763948}},
-      {name: 'QOL Yotsuya', address: '東京都千代田区 麹町5-4　セタニビル１F', position: {lat: 35.685027, lng: 139.733987}},
-      {name: 'Sugi Yurakucho', address: '東京都千代田区 有楽町1-11-1　3階', position: {lat: 35.675621, lng: 139.762932}},
-      {name: 'Sugi Ginza', address: '東京都中央区 銀座1-13-9　テラス銀座1階', position: {lat: 35.673288, lng: 139.769246}},
-      {name: 'QOL Tsukishima', address: '東京都中央区 月島4-5-12', position: {lat: 35.66067, lng: 139.782987}},
-      {name: 'Nihon Chozai Tokyo Nihonbashi 1chome', address: '東京都中央区 日本橋1-7-9', position: {lat: 35.683206, lng: 139.775545}},
-      {name: 'QOL Kabutocho', address: '東京都中央区 日本橋兜町8-4　1階', position: {lat: 35.681575, lng: 139.777913}},
-      {name: 'Sugi Nihonbashi', address: '東京都中央区 日本橋室町1-13-9', position: {lat: 35.686434, lng: 139.775384}},
-    ]
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 35.687765, lng: 139.775901},
-      zoom: 13
-    });
-    var markers = pharmacies.map(function(pharmacy) {
-      return new google.maps.Marker({
-        position: pharmacy.position,
-        map: map
-      });
-    });
-    var infoWindows = pharmacies.map(function(pharmacy, index, allWindows) {
-      var contentString =
-        '<div class="card blue-grey darken-1" style="margin: 0px;">'+
-        '<div class="card-content white-text">'+
-        '<span class="card-title">'+ pharmacy.name +'</span>'+
-        '<p>'+ pharmacy.address +'</p>'+
-        '</div>'+
-        '<div class="card-action">'+
-        '<a id="join" onclick="window.app.default()" style="display: flex;align-items: center;"><i class="material-icons">call</i><span style="margin-left: 10px;">Call</span></a>'+
-        '</div>'+
-        '</div>';
-      var infoWindow = new google.maps.InfoWindow({
-        content: contentString
-      });
-      var marker = markers[index]
-      marker.addListener('click', function() {
-        closeAllWindows();
-        infoWindow.open(map, marker);
-      });
-      return infoWindow;
-    })
-    function closeAllWindows() {
-      infoWindows.forEach(function(singleWindow) {
-        if (singleWindow.map) singleWindow.close();
-      })
-    }
-  }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSK3Rm1nizTKldV12goJcM85b2VN4Z3u8&callback=initMap"
-    async defer></script>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>

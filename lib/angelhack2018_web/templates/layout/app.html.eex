@@ -12,13 +12,18 @@
   </head>
   <body>
     <header>
-      <section class="container">
-        <nav role="navigation">
-          <ul>
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
+      <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+
+          <a id="logo-container" href="#" class="brand-logo teal-text" style="align-text:center">
+            <img src="./images/my_drugstore_icon_1.png" alt="Smiley face" height="28" width="38"/>
+            My Drugstore
+          </a>
+          <ul class="right">
+            <li><a href="#" class="teal-text">Login</a></li>
           </ul>
-        </nav>
-      </section>
+        </div>
+      </nav>
     </header>
     <main role="main" class="container">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
