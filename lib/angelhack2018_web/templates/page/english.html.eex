@@ -57,15 +57,7 @@
     var pharmacies = [
       {name: 'QOL Marunouchi', address: '東京都千代田区 大手町2-2-1　新大手町ビル122区', position: {lat: 35.685291, lng: 139.767059}},
       {name: 'Nihon Chozai Yomiuri Shinbunsha', address: '東京都千代田区 大手町1-7-1　読売新聞ビル3階', position: {lat: 35.687216, lng: 139.764471}},
-      {name: 'QOL Kanda Kjibashi', address: '東京都千代田区 鍛冶町2-3-2　神田センタービル1階', position: {lat: 35.691327, lng: 139.772112}},
-      {name: 'Sugi Otyanomizu', address: '東京都千代田区 神田駿河台2-2-5', position: {lat: 35.69894, lng: 139.763948}},
-      {name: 'QOL Yotsuya', address: '東京都千代田区 麹町5-4　セタニビル１F', position: {lat: 35.685027, lng: 139.733987}},
-      {name: 'Sugi Yurakucho', address: '東京都千代田区 有楽町1-11-1　3階', position: {lat: 35.675621, lng: 139.762932}},
-      {name: 'Sugi Ginza', address: '東京都中央区 銀座1-13-9　テラス銀座1階', position: {lat: 35.673288, lng: 139.769246}},
-      {name: 'QOL Tsukishima', address: '東京都中央区 月島4-5-12', position: {lat: 35.66067, lng: 139.782987}},
-      {name: 'Nihon Chozai Tokyo Nihonbashi 1chome', address: '東京都中央区 日本橋1-7-9', position: {lat: 35.683206, lng: 139.775545}},
-      {name: 'QOL Kabutocho', address: '東京都中央区 日本橋兜町8-4　1階', position: {lat: 35.681575, lng: 139.777913}},
-      {name: 'Sugi Nihonbashi', address: '東京都中央区 日本橋室町1-13-9', position: {lat: 35.686434, lng: 139.775384}},
+      {name: 'QOL Kanda Kjibashi', address: '東京都千代田区 鍛冶町2-3-2　神田センタービル1階', position: {lat: 35.691327, lng: 139.772112}}
     ]
     map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 35.687765, lng: 139.775901},
