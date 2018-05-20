@@ -9,46 +9,33 @@
     padding: 0;
   }
 </style>
-<a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+<a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose your language</a>
 
   <!-- Dropdown Structure -->
   <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+    <li><a href="#!">English</a></li>
+    <li><a href="#!">Afrikaans</a></li>
+    <li><a href="#!">Albanian</a></li>
+    <li><a href="#!">Amharic</a></li>
+    <li><a href="#!">Arabic</a></li>
+    <li><a href="#!">Armenian</a></li>
+    <li><a href="#!">Basque</a></li>
+    <li><a href="#!">Bengali</a></li>
+    <li><a href="#!">Bulgarian</a></li>
+    <li><a href="#!">Byelorussian</a></li>
+    <li><a href="#!">Bulgarian</a></li>
+    <li><a href="#!">Chinese</a></li>
+    <li><a href="#!">Croatian</a></li>
+    <li><a href="#!">Arabic</a></li>
+    <li><a href="#!">Armenian</a></li>
+    <li><a href="#!">Danish</a></li>
+    <li><a href="#!">German</a></li>
+
   </ul>
 
 <script>
   $('.dropdown-trigger').dropdown();
 </script>
-<div class = "row">
-  <form class = "col s12">
-      <div class = "row">
-        <select>
-          <option value = "" disabled selected>Select your language</option>
-          <option value = "1">English</option>
-          <option value = "2">Afrikaans</option>
-          <option value = "3">Albanian</option>
-          <option value = "1">Amharic</option>
-          <option value = "2">Arabic</option>
-          <option value = "3">Armenian</option>
-          <option value = "1">Basque</option>
-          <option value = "2">Bengali</option>
-          <option value = "3">Byelorussian</option>
-          <option value = "2">Bulgarian</option>
-          <option value = "3">Catalan</option>
-          <option value = "1">Czech</option>
-          <option value = "2">Chinese</option>
-          <option value = "1">Croatian</option>
-          <option value = "2"> Danish</option>
-          <option value = "3">Dutch</option>
-        </select>
-      </div>
-  </form>
-</div>
 <div id="div_device" class="panel panel-default">
   <div class="select">
     <select id="audioSource"></select>
